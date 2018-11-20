@@ -53,3 +53,4 @@ class NN_Drop(object):
 
         Z2 = np.dot(W2,A1)
         A2 = relu(Z2)
+        print()
