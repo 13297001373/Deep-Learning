@@ -45,5 +45,6 @@ def updata_param_with_mini_sgd(X,y,parames,grades,learn_rate,batch_size):
             ##前向传播
             ##反向传播
             ##参数更新
+            pass
 
 
