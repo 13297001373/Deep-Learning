@@ -135,10 +135,13 @@ class simple_CNN(object):
         (m,n_H0,n_W0,n_C0) = X_train.shape
         n_y = y_train.shape[1]
         ##1.create placehold
+
         X,y = self.create_placehold(n_H0,n_W0,n_C0,n_y)
         ##2.initialize parameters
+
         parameters = self.initialize_parameters()
         ##3.forword propagation
+
         yHat = self.forword_propagation(X,parameters)
         ##4.compute cost
         cost = self.compute_cost(yHat,y)
@@ -149,7 +152,7 @@ class simple_CNN(object):
 
         ##6.initializer
         init = tf.global_variables_initializer()
-        merge = tf.summary.merge_all()
+
 
         with tf.Session() as sess:
             sess.run(init)
