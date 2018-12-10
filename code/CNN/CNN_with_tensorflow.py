@@ -102,10 +102,9 @@ class simple_CNN(object):
         :param y: real
         :return: cost
         '''
-
         cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=yHat,labels=y))
-
         return cost
+    
     def random_mini_batches(self,X,y,batch_size):
         m = y.shape[0]
         permutation = np.random.permutation(m)
@@ -152,6 +151,7 @@ class simple_CNN(object):
 
         ##6.initializer
         init = tf.global_variables_initializer()
+
 
 
         with tf.Session() as sess:
